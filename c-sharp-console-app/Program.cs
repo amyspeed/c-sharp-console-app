@@ -79,8 +79,41 @@ namespace c_sharp_console_app
                 fibonacci.Add(prev + prev2);
             }
 
-                foreach (var item in fibonacci)
-                    Console.WriteLine(item);
+            foreach (var item in fibonacci)
+                Console.WriteLine(item);
+
+            // OBJECTS
+
+
+            var account = new BankAccount("Amy", 10000);
+            Console.WriteLine($"Acount {account.Number} was created for {account.Owner} with {account.Balance}.");
+
+
+        }
+    }
+
+    public class BankAccount
+    {
+        public string Number { get;  }
+
+        public string Owner { get; set; }
+
+        public decimal Balance { get;  }
+
+        public BankAccount(string name, decimal initialBalance)
+        {
+            Owner = name;
+            Balance = initialBalance;
+        }
+
+        public void MakeDeposit(decimal amount, DateTime date, string note)
+        {
+
+        }
+
+        public void MakeWithdrawal(decimal amount, DateTime date, string note)
+        {
+
         }
     }
 }
