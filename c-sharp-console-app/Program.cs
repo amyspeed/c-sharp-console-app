@@ -66,6 +66,21 @@ namespace c_sharp_console_app
             }
 
 
+            // FIBONACCI
+
+            var fibonacci = new List<int> { 1, 1 };
+
+            while (fibonacci.Count < 20)
+            {
+
+                var prev = fibonacci[fibonacci.Count - 1];
+                var prev2 = fibonacci[fibonacci.Count - 2];
+
+                fibonacci.Add(prev + prev2);
+            }
+
+                foreach (var item in fibonacci)
+                    Console.WriteLine(item);
         }
     }
 }
