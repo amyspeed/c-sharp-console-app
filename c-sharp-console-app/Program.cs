@@ -6,7 +6,14 @@ namespace c_sharp_console_app
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int x = 0;
+            do
+            {
+                Console.WriteLine($"Hello {x}");
+                x++;
+            } while (x < 10);
+
+            Console.WriteLine("All Done!");
         }
     }
 }
