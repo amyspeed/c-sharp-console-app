@@ -14,6 +14,11 @@ namespace c_sharp_console_app
             } while (x < 10);
 
             Console.WriteLine("All Done!");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"For loop i = {i}");
+            }
         }
     }
 }
