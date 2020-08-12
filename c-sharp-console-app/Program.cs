@@ -100,10 +100,15 @@ namespace c_sharp_console_app
 
         public decimal Balance { get;  }
 
+        private static int accountNumberSeed = 1234567890;
+
         public BankAccount(string name, decimal initialBalance)
         {
             Owner = name;
             Balance = initialBalance;
+
+            Number = accountNumberSeed.ToString();
+            accountNumberSeed++;
         }
 
         public void MakeDeposit(decimal amount, DateTime date, string note)
